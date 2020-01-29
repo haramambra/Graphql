@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "{schema,typings,utils,lib}/**/*.*",
+    "index.ts"
+  ],
+  "execMap": {
+    "ts": "ts-node -T --files"
+  }
+}

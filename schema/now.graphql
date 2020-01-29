@@ -1,0 +1,4 @@
+type Query {
+	# Текущее время сервера по UTC
+	now: String
+}

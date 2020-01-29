@@ -1,0 +1,28 @@
+schema:
+  - "./schema/**/*.graphql"
+config:
+  printTime: false
+  avoidOptionals: false
+  noGraphqlTag: true
+  noNamespaces: true
+  scalars:
+    DateTimeInput: "Date"
+    DateInput: "Date"
+    DateTimeIso: "Date | string"
+    DateIso: "Date | string"
+generates:
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
+  ./types-generated/types.ts:
+    config:
+      contextType: ../lib/ResolverContext#ResolverContext
+      namingConvention:
+        enumValues: change-case#upperCase
+    plugins:
+      - add: /* eslint-disable */
+      - "typescript"
+      - "typescript-resolvers"
+hooks:
+  afterAllFileWrite:
+    - prettier --write
