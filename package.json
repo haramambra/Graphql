@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "graphql-codegen": "gql-gen -c graphql-codegen.yml -o",
     "graphql-codegen-watch": "gql-gen -c graphql-codegen.yml -o -w",
-    "graphql-breaking-changes": "graphql-inspector diff git:origin/master:graphql.schema.json ./graphql.schema.json --rule suppressRemovalOfDeprecatedField --rule ignoreDescriptionChanges",
     "graphql-validate-queries": "graphql-inspector validate \"./test/**/*.graphql\" \"./schema/**/*.graphql\" --noStrictFragments",
     "start": "nodemon index.ts"
   },
