@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grpc/grpc-js": "^0.6.15",
+    "@grpc/grpc-js": "^1.1.8",
     "apollo-server-express": "^2.9.13",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
